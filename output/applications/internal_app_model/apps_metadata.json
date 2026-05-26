@@ -1,0 +1,12 @@
+{
+  "source_file": "apps_db_complete_short.xlsx",
+  "extraction_date": "2026-05-26",
+  "total_applications": 5,
+  "application_ids": [
+    "app001",
+    "app002",
+    "app003",
+    "app004",
+    "app005"
+  ]
+}
