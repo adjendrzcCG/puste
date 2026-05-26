@@ -129,9 +129,9 @@
     },
     {
       "id": "update_outdated_components",
-      "status": "FULFILLED",
+      "status": "APPLICABLE",
       "match_type": "ai",
-      "reason": "No outdated application components identified in assessment.",
+      "reason": "AIX 7.2 is OUTDATED per technology assessment, and COBOL-2014 is a legacy programming language. Multiple application components require updates.",
       "confidence": 8,
       "source": {
         "document_id": "",

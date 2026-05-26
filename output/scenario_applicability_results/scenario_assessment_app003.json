@@ -101,10 +101,10 @@
     },
     {
       "id": "upgrade_legacy_databases",
-      "status": "FULFILLED",
+      "status": "APPLICABLE",
       "match_type": "ai",
-      "reason": "Database appears on supported lifecycle versions.",
-      "confidence": 8,
+      "reason": "PostgreSQL 13 reaches End of Life on November 13, 2025 and is classified as OUTDATED. Upgrading to a current version (PostgreSQL 16/17) is recommended before security patches cease.",
+      "confidence": 9,
       "source": {
         "document_id": "",
         "document_title": "",

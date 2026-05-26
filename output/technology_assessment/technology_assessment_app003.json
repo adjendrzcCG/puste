@@ -9,7 +9,7 @@
       "version": "RHEL 7",
       "component_status": "EOL",
       "eol_date": "2024-06-30",
-      "reason": "RHEL 7 reached end of maintenance support in 2024.",
+      "reason": "Red Hat Enterprise Linux 7 reached End of Life on June 30, 2024 and no longer receives security patches under standard support.",
       "confidence": 9
     },
     {
@@ -18,10 +18,10 @@
       "component_type": "database",
       "managed_service": false,
       "version": "PostgreSQL 13",
-      "component_status": "CURRENT_VERSION",
-      "eol_date": "2028-11-30",
-      "reason": "PostgreSQL 13 remains community supported until late 2028.",
-      "confidence": 8
+      "component_status": "OUTDATED",
+      "eol_date": "2025-11-13",
+      "reason": "PostgreSQL 13 reaches end of community support on November 13, 2025. It is two major versions behind the current release (PostgreSQL 17) and approaching EOL.",
+      "confidence": 9
     },
     {
       "component_name": "Programming language",
@@ -30,9 +30,9 @@
       "managed_service": false,
       "version": "Python 3.9",
       "component_status": "EOL",
-      "eol_date": "2025-10-01",
-      "reason": "Python 3.9 has reached end of upstream security support.",
-      "confidence": 8
+      "eol_date": "2025-10-05",
+      "reason": "Python 3.9 reached end of upstream security support on October 5, 2025. No further security patches are provided.",
+      "confidence": 9
     },
     {
       "component_name": "Framework",
@@ -42,23 +42,23 @@
       "version": "unknown",
       "component_status": "NO_KNOWLEDGE",
       "eol_date": null,
-      "reason": "No explicit framework field available in source row.",
+      "reason": "No explicit framework field available in source data.",
       "confidence": 5
     },
     {
       "component_name": "Application Server",
-      "component_family": "Apache",
+      "component_family": "Apache Tomcat",
       "component_type": "application_server",
       "managed_service": false,
       "version": "Apache Tomcat 6.1",
       "component_status": "EOL",
-      "eol_date": null,
-      "reason": "Apache Tomcat 6.x is end-of-life.",
+      "eol_date": "2016-12-31",
+      "reason": "Apache Tomcat 6.x reached End of Life on December 31, 2016. No security patches have been issued since then.",
       "confidence": 10
     }
   ],
   "has_eol_components": true,
-  "has_outdated_components": false,
+  "has_outdated_components": true,
   "has_missing_version_data": true,
   "analysis_timestamp": "2026-05-26T10:36:14Z"
 }
