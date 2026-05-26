@@ -1,0 +1,64 @@
+{
+  "application_identifier": "app003",
+  "components_analyzed": [
+    {
+      "component_name": "Operating system",
+      "component_family": "RHEL",
+      "component_type": "os",
+      "managed_service": false,
+      "version": "RHEL 7",
+      "component_status": "EOL",
+      "eol_date": "2024-06-30",
+      "reason": "RHEL 7 reached end of maintenance support in 2024.",
+      "confidence": 9
+    },
+    {
+      "component_name": "Database",
+      "component_family": "PostgreSQL",
+      "component_type": "database",
+      "managed_service": false,
+      "version": "PostgreSQL 13",
+      "component_status": "CURRENT_VERSION",
+      "eol_date": "2028-11-30",
+      "reason": "PostgreSQL 13 remains community supported until late 2028.",
+      "confidence": 8
+    },
+    {
+      "component_name": "Programming language",
+      "component_family": "Python",
+      "component_type": "language",
+      "managed_service": false,
+      "version": "Python 3.9",
+      "component_status": "EOL",
+      "eol_date": "2025-10-01",
+      "reason": "Python 3.9 has reached end of upstream security support.",
+      "confidence": 8
+    },
+    {
+      "component_name": "Framework",
+      "component_family": "unknown",
+      "component_type": "framework",
+      "managed_service": false,
+      "version": "unknown",
+      "component_status": "NO_KNOWLEDGE",
+      "eol_date": null,
+      "reason": "No explicit framework field available in source row.",
+      "confidence": 5
+    },
+    {
+      "component_name": "Application Server",
+      "component_family": "Apache",
+      "component_type": "application_server",
+      "managed_service": false,
+      "version": "Apache Tomcat 6.1",
+      "component_status": "EOL",
+      "eol_date": null,
+      "reason": "Apache Tomcat 6.x is end-of-life.",
+      "confidence": 10
+    }
+  ],
+  "has_eol_components": true,
+  "has_outdated_components": false,
+  "has_missing_version_data": true,
+  "analysis_timestamp": "2026-05-26T10:36:14Z"
+}

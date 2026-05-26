@@ -1,0 +1,18 @@
+{
+  "application_identifier": "app005",
+  "assessments": [
+    {
+      "exclusion_type": "RETIRED",
+      "applies": true,
+      "confidence": 10,
+      "reasoning": "Application status or decommission data indicates retirement."
+    },
+    {
+      "exclusion_type": "SAP",
+      "applies": false,
+      "confidence": 9,
+      "reasoning": "No SAP indicator found in name, description, or solution type."
+    }
+  ],
+  "out_of_scope": true
+}
