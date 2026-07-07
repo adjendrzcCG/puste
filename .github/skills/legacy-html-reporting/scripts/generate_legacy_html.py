@@ -71,6 +71,7 @@ def render_markdown_blocks(lines: list[str]) -> str:
     blocks: list[str] = []
     buffer: list[str] = []
     list_items: list[str] = []
+    table_lines: list[str] = []
     in_code = False
     code_buffer: list[str] = []
 
@@ -91,6 +92,15 @@ def render_markdown_blocks(lines: list[str]) -> str:
         blocks.append(f"<ul>{items}</ul>")
         list_items = []
 
+    def flush_table() -> None:
+        nonlocal table_lines
+        if not table_lines:
+            return
+        table_html = render_pipe_table(table_lines)
+        if table_html:
+            blocks.append(table_html)
+        table_lines = []
+
     def flush_code() -> None:
         nonlocal code_buffer
         code = "\n".join(code_buffer)
@@ -102,6 +112,7 @@ def render_markdown_blocks(lines: list[str]) -> str:
         if line.startswith("```"):
             flush_paragraph()
             flush_list()
+            flush_table()
             if in_code:
                 flush_code()
                 in_code = False
@@ -114,27 +125,36 @@ def render_markdown_blocks(lines: list[str]) -> str:
         if not line.strip():
             flush_paragraph()
             flush_list()
+            flush_table()
+            continue
+        if line.startswith("#### "):
+            flush_paragraph()
+            flush_list()
+            flush_table()
+            blocks.append(f"<h4>{inline_markdown(line[5:].strip())}</h4>")
             continue
         if line.startswith("### "):
             flush_paragraph()
             flush_list()
+            flush_table()
             blocks.append(f"<h3>{inline_markdown(line[4:].strip())}</h3>")
             continue
         if re.match(r"^[-*] ", line):
             flush_paragraph()
+            flush_table()
             list_items.append(line[2:].strip())
             continue
         if "|" in line and line.strip().startswith("|") and line.strip().endswith("|"):
             flush_paragraph()
             flush_list()
-            table_html = render_pipe_table([line])
-            if table_html:
-                blocks.append(table_html)
+            table_lines.append(line)
             continue
+        flush_table()
         buffer.append(line)
 
     flush_paragraph()
     flush_list()
+    flush_table()
     if in_code:
         flush_code()
     return "\n".join(blocks)
