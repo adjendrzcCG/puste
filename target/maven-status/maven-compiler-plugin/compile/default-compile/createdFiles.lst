@@ -1,0 +1,15 @@
+com/example/puste/repository/ProductRepository.class
+com/example/puste/model/OperationResult.class
+com/example/puste/model/Category$Electronics.class
+com/example/puste/service/ProductService.class
+com/example/puste/model/OperationResult$Failure.class
+com/example/puste/controller/ProductController.class
+com/example/puste/PusteApplication.class
+com/example/puste/model/Category.class
+com/example/puste/model/OperationResult$Success.class
+com/example/puste/model/Category$Food.class
+com/example/puste/model/OperationResult$NotFound.class
+com/example/puste/controller/ProductController$ProductRequest.class
+com/example/puste/model/Product.class
+com/example/puste/model/Category$Other.class
+com/example/puste/model/Category$Clothing.class
